@@ -85,13 +85,13 @@ a {
   ul {
     display: flex;
     flex-direction: column;
-    margin-top: 13vh;
+    margin-top: 10vh;
     list-style-type: none;
-    gap: 4vh;
+    gap: 3vh;
   }
   li > a {
     color: var(--added-color);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     position: relative;
   }
 
@@ -129,5 +129,19 @@ a {
   }
   .content1 > a > i {
     margin-right: 10px;
+    font-size: 1.4rem;
+  }
+  .fa-bullhorn {
+    color: brown;
+  }
+  .fa-handshake,
+  .fa-left-right,
+  .fa-screwdriver-wrench,
+  .fa-arrow-rotate-left,
+  .fa-brands,
+  .fa-share,
+  .fa-filter-circle-dollar,
+  .stake {
+    color: var(--logoextract);
   }
 }

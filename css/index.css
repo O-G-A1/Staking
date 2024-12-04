@@ -119,17 +119,17 @@ a {
     color: var(--primary-color);
   }
   .content1 p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .content1 a {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     background-color: var(--logoextract);
     padding: 0.6rem 2rem;
     border-radius: 5px;
   }
   .content1 > a > i {
     margin-right: 10px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .fa-bullhorn {
     color: brown;
@@ -143,5 +143,30 @@ a {
   .fa-filter-circle-dollar,
   .stake {
     color: var(--logoextract);
+  }
+  .crypto-ticker {
+    width: 100%;
+    background-color: grey;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+  .ticker-content {
+    display: inline-block;
+    animation: scroll 70s linear infinite;
+  }
+  .ticker-content span {
+    margin: 0 30px;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }

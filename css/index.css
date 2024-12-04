@@ -1,0 +1,133 @@
+@charset "UTF-8";
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(
+    to bottom,
+    rgb(239, 237, 240),
+    rgb(142, 65, 224) 40%
+  );
+  background-size: 100% 200%;
+  background-attachment: fixed;
+}
+:root {
+  --primary-color: rgb(142, 65, 224);
+  --added-color: white;
+  --logoextract: #32ace3;
+}
+a {
+  text-decoration: none;
+}
+@media all and (max-width: 800px) {
+  .icon {
+    width: 3.9rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+  }
+  .csr {
+    text-align: center;
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  .navbar > span {
+    background-color: var(--primary-color);
+    width: 30px;
+    height: 3px;
+  }
+  .dropdown-menu {
+    position: fixed;
+    left: 0;
+    top: -100%;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    color: var(--added-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all ease-in-out 0.2s;
+    overflow: hidden;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    padding: 5px 8px;
+    border-radius: 2px;
+    color: var(--added-color);
+    background-color: none;
+    border: none;
+    cursor: pointer;
+  }
+  button > i {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+  }
+  body.noscroll {
+    overflow: hidden;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 13vh;
+    list-style-type: none;
+    gap: 4vh;
+  }
+  li > a {
+    color: var(--added-color);
+    font-size: 1.6rem;
+    position: relative;
+  }
+
+  li i {
+    font-size: 1.6rem;
+    margin-right: 3vw;
+  }
+
+  nav a:nth-of-type(2) {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+  }
+  hr {
+    width: 90%;
+  }
+  .content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.3rem 2rem;
+  }
+  .content1 h2 {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: var(--primary-color);
+  }
+  .content1 p {
+    font-size: 1.4rem;
+  }
+  .content1 a {
+    font-size: 1.8rem;
+    background-color: var(--logoextract);
+    padding: 0.6rem 2rem;
+    border-radius: 5px;
+  }
+  .content1 > a > i {
+    margin-right: 10px;
+  }
+}

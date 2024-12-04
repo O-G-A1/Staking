@@ -29,6 +29,8 @@ a {
   nav {
     display: flex;
     flex-direction: row;
+    position: relative;
+    top: 40px;
     align-items: center;
     padding: 0.8rem 1.5rem;
   }
@@ -62,6 +64,7 @@ a {
     align-items: flex-start;
     transition: all ease-in-out 0.2s;
     overflow: hidden;
+    z-index: 1001;
   }
 
   .close-btn {
@@ -144,28 +147,38 @@ a {
   .stake {
     color: var(--logoextract);
   }
+  /* Ticker styles */
   .crypto-ticker {
     width: 100%;
-    background-color: grey;
-    color: white;
+    background-color: #222;
+    color: #fff;
     overflow: hidden;
-    white-space: nowrap;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 50px;
+    display: flex;
+    align-items: center;
   }
+
   .ticker-content {
     display: inline-block;
-    animation: scroll 70s linear infinite;
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite; /* Adjust speed here */
   }
+
   .ticker-content span {
-    margin: 0 30px;
+    margin: 0 5px;
+    display: inline-flex;
+    align-items: center;
   }
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%);
+
+  /* Keyframes for seamless scrolling */
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
     }
-    100% {
+    to {
       transform: translateX(-100%);
     }
   }

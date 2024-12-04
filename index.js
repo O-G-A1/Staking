@@ -12,38 +12,70 @@ closeBtn.addEventListener("click", () => {
   dropDownMenu.style.opacity = "0";
   document.body.classList.remove("noscroll");
 });
-async function fetchCryptoPrices() {
-  const response = await fetch(
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_per_page=10&page=1",
-    {
-      method: "GET",
-      headers: { Accept: "application/json" },
-      params: {
-        vs_currency: "usd",
-        order: "market_cap_desc",
-        per_page: 4,
-        page: 1,
-      },
-    }
-  );
-  if (response.ok) {
-    throw new Error(`API error: ${response.status} ${response.statusText}`);
-  }
-  const data = await response.json();
-  const tickerContent = document.querySelector(".ticker-content");
-  if (!tickerContent) {
-    console.error("Element with class 'ticker-content' not found in the DOM.");
-    return;
-  }
-  tickerContent.innerHTML = "";
+// CoinGecko API URL for fetching cryptocurrency data
+const apiUrl = "https://api.coingecko.com/api/v3/coins/markets";
 
-  data.forEach((coin) => {
-    tickerContent.innerHTML += `<span>${coin.name}
-    (${coin.symbol.toUpperCase()}): $${coin.current_price.toFixed(2)}
-    ${
-      coin.price_change_percentage_24h >= 0 ? "+" : ""
-    }${coin.price_change_percentage_24h.toFixed(2)}%</span>`;
-  });
+// DOM element for the ticker
+const tickerContent = document.getElementById("ticker-content");
+
+// Adjustable per_page and page variables
+const perPage = 10; // Number of cryptos to display at a time
+let currentPage = 1; // Tracks the current page
+
+// Function to fetch crypto data for a specific page with images
+async function fetchCryptoData(page, perPage) {
+  try {
+    // Calculate offset based on page number
+    const offset = (page - 1) * perPage;
+
+    // Fetch data from CoinGecko API
+    const response = await fetch(
+      `${apiUrl}?vs_currency=usd&order=market_cap_desc&per_page=${perPage}&page=${page}`
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Generate ticker items from data
+    const formattedData = data
+      .map((coin) => {
+        const price = parseFloat(coin.current_price).toFixed(2);
+        const change24h = parseFloat(coin.price_change_percentage_24h).toFixed(
+          2
+        );
+        const changeColor = change24h >= 0 ? "green" : "red";
+        return `
+        <span>
+          <img src="${coin.image}" alt="${
+          coin.name
+        }" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">
+          ${coin.name} (${coin.symbol.toUpperCase()}): $${price} 
+          <span style="color:${changeColor}">(${change24h}%)</span>
+        </span>
+      `;
+      })
+      .join("");
+
+    // Update ticker content with images
+    tickerContent.innerHTML = formattedData + formattedData; // Duplicate for seamless scrolling
+  } catch (error) {
+    console.error("Error fetching crypto data:", error);
+    tickerContent.innerHTML = "<span>Error loading crypto data</span>";
+  }
 }
-fetchCryptoPrices();
-setInterval(fetchCryptoPrices, 60000);
+
+// Function to handle periodic updates and cycling through pages
+function startTicker() {
+  fetchCryptoData(currentPage, perPage);
+
+  // Move to the next page every 10 seconds
+  setInterval(() => {
+    currentPage++;
+    fetchCryptoData(currentPage, perPage);
+  }, 100000); // 10 seconds for each page
+}
+
+// Start the ticker
+startTicker();

@@ -93,3 +93,37 @@ document.addEventListener("DOMContentLoaded", function () {
     drag: false,
   }).mount();
 });
+
+// Count-up animation for statistics
+function countUp() {
+  const counters = document.querySelectorAll(".counter");
+  counters.forEach((counter) => {
+    const target = +counter.getAttribute("data-target");
+    let count = 0;
+    const speed = 500; // Adjust speed for counting (lower is faster)
+    const increment = target / speed;
+
+    const updateCounter = () => {
+      if (count < target) {
+        count += increment;
+        counter.textContent = Math.floor(count);
+        setTimeout(updateCounter, 1);
+      } else {
+        counter.textContent = target;
+        // Restart counting after reaching the target
+        setTimeout(() => {
+          counter.textContent = 0; // Reset the number
+          count = 0; // Reset the count
+          updateCounter(); // Start counting again
+        }, 15000); // Delay before restarting (1 second)
+      }
+    };
+    updateCounter();
+  });
+}
+
+// Start counting when the page loads and then continuously recount
+window.onload = function () {
+  countUp();
+  setInterval(countUp, 7000); // Recount every 3 seconds (adjust as needed)
+};

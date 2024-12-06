@@ -124,6 +124,7 @@ a {
     font-size: 1.7rem;
     font-weight: 900;
     color: var(--primary-color);
+    text-shadow: 0.5px 0.5px 2px var(--primary-color);
   }
   .content1 p {
     font-size: 1.3rem;
@@ -131,18 +132,77 @@ a {
   .content1 a {
     font-size: 1.5rem;
     background-color: var(--logoextract);
-    padding: 0.6rem 2rem;
+    padding: 0.6rem 1.1rem;
     border-radius: 5px;
   }
   .content1 > a > i {
     margin-right: 10px;
     font-size: 1.3rem;
   }
+  .content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.3rem 1.5rem;
+    margin-top: 3vh;
+  }
+  .content2 h2 {
+    align-self: center;
+    font-weight: bold;
+  }
+  .content2 ul {
+    margin-top: 0;
+    padding: 0.4rem 1.4rem;
+    list-style-type: circle;
+  }
+  .content2 ul li {
+    font-size: 1.2rem;
+  }
+  .content2 ul span {
+    font-weight: 600;
+  }
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem 3rem;
+    margin-top: 3vh;
+    overflow: visible;
+  }
+  #paragraph-slider {
+    overflow: visible;
+  }
+  .testimonials h2 {
+    text-align: center;
+    color: var(--logoextract);
+    margin-bottom: 5vh;
+    text-shadow: 0.5px 0.5px 2px black;
+  }
+  .splide__list,
+  .splide__track {
+    overflow: visible;
+  }
+  .comments {
+    overflow: visible;
+  }
+
+  .splide__slide {
+    padding: 1rem 1.2rem;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-shadow: 0.5px 0.5px 2px black;
+    border: 0.3px solid var(--logoextract);
+  }
+
+  .splide__slide:nth-child(even) {
+    /* background: #eaeaea; */
+  }
+
   .fa-bullhorn {
     color: brown;
   }
 
-  /* Ticker styles */
   .crypto-ticker {
     width: 100%;
     background-color: #222;
@@ -159,7 +219,7 @@ a {
   .ticker-content {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll-left 30s linear infinite; /* Adjust speed here */
+    animation: scroll-left 30s linear infinite;
   }
 
   .ticker-content span {
@@ -180,8 +240,29 @@ a {
   .fa-airbnb {
     font-size: 1.4rem;
   }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0rem;
+  }
+  .privacy {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .privacy a {
+    color: white;
+  }
+  .hrfooter {
+    margin-top: 10vh;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+  }
 
-  /* Keyframes for seamless scrolling */
   @keyframes scroll-left {
     from {
       transform: translateX(0);

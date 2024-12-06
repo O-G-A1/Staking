@@ -79,3 +79,17 @@ function startTicker() {
 
 // Start the ticker
 startTicker();
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#paragraph-slider", {
+    type: "loop",
+    perPage: 1,
+    autoplay: true,
+    pauseOnHover: true,
+    pagination: false,
+    arrows: false,
+    speed: 300,
+    interval: 2000,
+    drag: false,
+  }).mount();
+});

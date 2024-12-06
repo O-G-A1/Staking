@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
     pauseOnHover: true,
     pagination: false,
     arrows: false,
-    speed: 300,
-    interval: 2000,
+    speed: 100,
+    interval: 8000,
     drag: false,
   }).mount();
 });
@@ -115,7 +115,7 @@ function countUp() {
           counter.textContent = 0; // Reset the number
           count = 0; // Reset the count
           updateCounter(); // Start counting again
-        }, 15000); // Delay before restarting (1 second)
+        }, 19000); // Delay before restarting (1 second)
       }
     };
     updateCounter();

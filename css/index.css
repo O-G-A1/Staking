@@ -38,6 +38,7 @@ a {
     text-align: center;
     margin-left: 0;
     font-size: 1.5rem;
+    font-weight: 700;
   }
   .navbar {
     display: flex;
@@ -78,6 +79,9 @@ a {
     border: none;
     cursor: pointer;
   }
+  .fa-x {
+    font-size: 1rem;
+  }
   button > i {
     font-size: 1.6rem;
     color: var(--primary-color);
@@ -94,13 +98,13 @@ a {
   }
   li > a {
     color: var(--added-color);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     position: relative;
+    margin-left: 3vw;
   }
 
   li i {
-    font-size: 1.6rem;
-    margin-right: 3vw;
+    font-size: 1.2rem;
   }
 
   nav a:nth-of-type(2) {
@@ -114,7 +118,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0.3rem 2rem;
+    padding: 0.3rem 1.5rem;
   }
   .content1 h2 {
     font-size: 1.7rem;
@@ -137,16 +141,7 @@ a {
   .fa-bullhorn {
     color: brown;
   }
-  .fa-handshake,
-  .fa-left-right,
-  .fa-screwdriver-wrench,
-  .fa-arrow-rotate-left,
-  .fa-brands,
-  .fa-share,
-  .fa-filter-circle-dollar,
-  .stake {
-    color: var(--logoextract);
-  }
+
   /* Ticker styles */
   .crypto-ticker {
     width: 100%;
@@ -171,6 +166,19 @@ a {
     margin: 0 5px;
     display: inline-flex;
     align-items: center;
+  }
+  .market100 {
+    color: rgba(255, 0, 0, 0.836);
+  }
+  .robot {
+    font-weight: 700;
+  }
+  .fa-handshake,
+  .fa-bots {
+    font-size: 0.9rem;
+  }
+  .fa-airbnb {
+    font-size: 1.4rem;
   }
 
   /* Keyframes for seamless scrolling */

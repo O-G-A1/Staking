@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@import url(./index.css);
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(142, 65, 224);
+  --added-color: white;
+  --logoextract: #32ace3;
+}
+
+@media all and (max-width: 600px) {
+  .selections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    width: 100%;
+  }
+  .selection {
+    /* background-color: rgba(142, 65, 224, 0.106); */
+    background-color: white;
+    color: black;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px black;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}

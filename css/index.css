@@ -1,11 +1,25 @@
 @charset "UTF-8";
+@import url(./page2.css);
 html,
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   scroll-behavior: smooth;
   height: 100%;
   overflow-x: hidden;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgb(239, 237, 240)),
+    color-stop(40%, rgb(142, 65, 224))
+  );
+  background: -o-linear-gradient(
+    top,
+    rgb(239, 237, 240),
+    rgb(142, 65, 224) 40%
+  );
   background: linear-gradient(
     to bottom,
     rgb(239, 237, 240),
@@ -22,15 +36,22 @@ body {
 a {
   text-decoration: none;
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 600px) {
   .icon {
     width: 3.9rem;
   }
   nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     position: relative;
     top: 40px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0.8rem 1.5rem;
   }
@@ -41,7 +62,12 @@ a {
     font-weight: 700;
   }
   .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 5px;
     margin-left: auto;
@@ -60,9 +86,18 @@ a {
     width: 100%;
     height: 100%;
     color: var(--added-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
     transition: all ease-in-out 0.2s;
     overflow: hidden;
     z-index: 1001;
@@ -90,7 +125,12 @@ a {
     overflow: hidden;
   }
   ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-top: 10vh;
     list-style-type: none;
@@ -115,8 +155,15 @@ a {
     width: 90%;
   }
   .content1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     padding: 0.3rem 1.5rem;
   }
@@ -140,13 +187,22 @@ a {
     font-size: 1.3rem;
   }
   .content2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     padding: 0.3rem 1.5rem;
     margin-top: 3vh;
   }
   .content2 h2 {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     font-weight: bold;
   }
@@ -162,7 +218,12 @@ a {
     font-weight: 600;
   }
   .testimonials {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     padding: 0.3rem 3rem;
     margin-top: 3vh;
@@ -212,19 +273,28 @@ a {
     top: 0;
     z-index: 1000;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
   .ticker-content {
     display: inline-block;
     white-space: nowrap;
+    -webkit-animation: scroll-left 30s linear infinite;
     animation: scroll-left 30s linear infinite;
   }
 
   .ticker-content span {
     margin: 0 5px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .market100 {
@@ -241,13 +311,25 @@ a {
     font-size: 1.4rem;
   }
   .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 2rem 0rem;
   }
   .privacy {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: 40px;
   }
@@ -258,7 +340,12 @@ a {
     margin-top: 20vh;
   }
   .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: 5vw;
   }
@@ -274,9 +361,16 @@ a {
   }
 
   .stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -285,13 +379,20 @@ a {
     padding: 10px 5px;
     width: 20vw;
     text-align: center;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   .statitemmain {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    /* gap: 1vh; */
   }
 
   .stat-item h4 {
@@ -305,11 +406,24 @@ a {
     text-shadow: 0.5px 0.5px 2px black;
   }
 
-  @keyframes scroll-left {
+  @-webkit-keyframes scroll-left {
     from {
+      -webkit-transform: translateX(0);
       transform: translateX(0);
     }
     to {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scroll-left {
+    from {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-100%);
       transform: translateX(-100%);
     }
   }

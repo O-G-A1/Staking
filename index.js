@@ -148,19 +148,19 @@ function isInViewport(element) {
 }
 
 // Function to handle scroll animations
-function handleScrollAnimation() {
-  const elements = document.querySelectorAll(".selection");
-  elements.forEach((element) => {
-    if (isInViewport(element)) {
-      element.classList.add("active");
-    } else {
-      element.classList.remove("active");
-    }
-  });
-}
+// function handleScrollAnimation() {
+//   const elements = document.querySelectorAll(".selection");
+//   elements.forEach((element) => {
+//     if (isInViewport(element)) {
+//       element.classList.add("active");
+//     } else {
+//       element.classList.remove("active");
+//     }
+//   });
+// }
 
 // Attach scroll event listener
-window.addEventListener("scroll", handleScrollAnimation);
+// window.addEventListener("scroll", handleScrollAnimation);
 
 // Initial check in case elements are already in view
-handleScrollAnimation();
+// handleScrollAnimation();

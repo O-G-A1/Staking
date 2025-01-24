@@ -15,12 +15,12 @@
     display: flex;
     flex-direction: column;
     padding: 8px 60px;
-    gap: 20px;
+    gap: 50px;
   }
   .selection {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 14px;
     background-color: rgb(221, 210, 237);
     border-radius: 10px;
     padding: 10px;
@@ -33,12 +33,13 @@
     text-shadow: 0.5px 0.5px 2px var(--primary-color);
   }
   .selection span {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   .introtooptions {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 10px 20px;
   }
   .introtooptions h3 {
     font-size: 1.6rem;
@@ -51,9 +52,17 @@
     text-shadow: 0.5px 0.5px 2px var(--primary-color);
     font-size: 1.2rem;
     font-weight: 500;
-    padding: 10px;
+    padding: 15px 40px;
   }
   .selectoptions {
     text-align: center;
+  }
+  .chartdiv {
+    padding: 0px 20px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(cryptochart.jpg);
   }
 }

@@ -140,27 +140,3 @@ window.onload = function () {
   countUp();
   setInterval(countUp, 7000); // Recount every 3 seconds (adjust as needed)
 };
-
-// Function to check if an element is in the viewport
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return rect.top < window.innerHeight && rect.bottom > 0;
-}
-
-// Function to handle scroll animations
-// function handleScrollAnimation() {
-//   const elements = document.querySelectorAll(".selection");
-//   elements.forEach((element) => {
-//     if (isInViewport(element)) {
-//       element.classList.add("active");
-//     } else {
-//       element.classList.remove("active");
-//     }
-//   });
-// }
-
-// Attach scroll event listener
-// window.addEventListener("scroll", handleScrollAnimation);
-
-// Initial check in case elements are already in view
-// handleScrollAnimation();

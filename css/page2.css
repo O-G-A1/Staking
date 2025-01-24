@@ -33,7 +33,7 @@
     text-shadow: 0.5px 0.5px 2px var(--primary-color);
   }
   .selection span {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .introtooptions {
     display: flex;

@@ -140,3 +140,9 @@ window.onload = function () {
   countUp();
   setInterval(countUp, 7000); // Recount every 3 seconds (adjust as needed)
 };
+
+const clickDefi = document.getElementById("Deficlick");
+
+clickDefi.addEventListener("click", function () {
+  window.location.href = "defimarketanalysis.html";
+});

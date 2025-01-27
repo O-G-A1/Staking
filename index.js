@@ -161,8 +161,8 @@ function showSection(sectionId, clickedTab) {
   clickedTab.classList.add("active");
 }
 
-window.onload = function () {
-  const defaultSectionId = "seedphrase";
-  const defaultTab = document.getElementById("seed-btn");
-  showSection(defaultSectionId, defaultTab);
-};
+// window.onload = function () {
+//   const defaultSectionId = "seedphrase";
+//   const defaultTab = document.getElementById("seed-btn");
+//   showSection(defaultSectionId, defaultTab);
+// };

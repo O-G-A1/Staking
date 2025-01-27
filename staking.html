@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Staking</title>
+    <link rel="icon" href="./css/icon/iconfordefi.jpg" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/page2.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Crypto Staking</h1>
+    </header>
+
+    <section class="hero">
+      <h2>Earn Rewards by Staking Your Crypto</h2>
+      <p>
+        Stake your assets and earn up to 15% APY on your favorite
+        cryptocurrencies.
+      </p>
+    </section>
+
+     <section class="growth-animation">
+    <div class="animation-container">
+      <img src="./css/icon/bitcoin-blue-light-vector-removebg-preview.png" alt="Bitcoin" class="bouncing-logo" id="bouncingLogo">
+    </div>
+  </section>
+    
+    </section>
+    <section class="crypto-list">
+      <h3>Cryptocurrencies Available for Staking Today</h3>
+      <ul id="cryptoOptions">
+        <li>
+          <label>
+            <input type="radio" name="crypto" value="Ethereum" data-apy="7" />
+            Ethereum (7% APY)
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="crypto" value="Cardano" data-apy="5" />
+            Cardano (5% APY)
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="crypto" value="Solana" data-apy="6" />
+            Solana (6% APY)
+          </label>
+        </li>
+      </ul>
+      <button class="cta-button" id="confirmCryptoButton">
+        Confirm Selection
+      </button>
+    </section>
+
+    <section class="selected-crypto" id="selectedCrypto" style="display: none">
+      <h3>Selected Cryptocurrency</h3>
+      <p id="selectedCryptoDetails"></p>
+      <button class="cta-button" id="stakeButton">Stake Now</button>
+    </section>
+
+    <section class="how-it-works">
+      <h3>How It Works</h3>
+      <ol>
+        <li>Select the cryptocurrency you want to stake.</li>
+        <li>Connect your wallet.</li>
+        <li>Start earning rewards instantly.</li>
+      </ol>
+    </section>
+
+    <section class="faqs">
+      <h3>FAQs</h3>
+      <div>
+        <p><strong>What is staking?</strong></p>
+        <p>Staking involves locking up your cryptocurrency to earn rewards.</p>
+      </div>
+      <div>
+        <p><strong>Is staking safe?</strong></p>
+        <p>Yes, staking is generally safe, but risks may vary by platform.</p>
+      </div>
+      <div>
+        <p><strong>Can I unstake early?</strong></p>
+        <p>This depends on the platform and the cryptocurrency you stake.</p>
+      </div>
+    </section>
+
+    <hr class="hrfooter" />
+    <div class="footer">
+      <div class="privacy">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Condition</a>
+      </div>
+      <p>&copy;2024, DeFiVerse</p>
+      <div class="links">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-discord"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      // Confirm cryptocurrency selection
+      const confirmCryptoButton = document.getElementById(
+        "confirmCryptoButton"
+      );
+      const selectedCryptoSection = document.getElementById("selectedCrypto");
+      const selectedCryptoDetails = document.getElementById(
+        "selectedCryptoDetails"
+      );
+      const stakeButton = document.getElementById("stakeButton");
+
+      confirmCryptoButton.addEventListener("click", () => {
+        const selectedCrypto = document.querySelector(
+          'input[name="crypto"]:checked'
+        );
+        if (selectedCrypto) {
+          const cryptoName = selectedCrypto.value;
+          const cryptoAPY = selectedCrypto.getAttribute("data-apy");
+          selectedCryptoDetails.textContent = `You have selected ${cryptoName} with ${cryptoAPY}% APY.`;
+          selectedCryptoSection.style.display = "block";
+        } else {
+          alert("Please select a cryptocurrency to proceed.");
+        }
+      });
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/2f8df1a2ea.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -121,6 +121,7 @@
   .header {
     background-color: black;
     color: white;
+    padding: 0px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -130,7 +131,7 @@
   .header p {
     display: inline-block;
     white-space: nowrap;
-    animation: move-text 15s linear infinite;
+    animation: move-text 50s normal;
   }
 
   /* Animation to make the text move */

@@ -147,6 +147,10 @@ const clickDefi = document.getElementById("Deficlick");
 clickDefi.addEventListener("click", function () {
   window.location.href = "defimarketanalysis.html";
 });
+const clickStaking = document.getElementById("stakingclick");
+clickStaking.addEventListener("click", function () {
+  window.location.href = "staking.html";
+});
 
 function showSection(sectionId, clickedTab) {
   const sections = document.querySelectorAll(".section");

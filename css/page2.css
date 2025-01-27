@@ -118,7 +118,7 @@
     font-size: 1rem;
     font-weight: 600;
   }
-  .header {
+  .header1 {
     background-color: black;
     color: white;
     padding: 0px 20px;
@@ -128,7 +128,7 @@
   }
 
   /* Styling for the moving text */
-  .header p {
+  .header1 p {
     display: inline-block;
     white-space: nowrap;
     animation: move-text 50s normal;

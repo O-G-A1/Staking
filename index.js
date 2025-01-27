@@ -147,3 +147,22 @@ const clickDefi = document.getElementById("Deficlick");
 clickDefi.addEventListener("click", function () {
   window.location.href = "defimarketanalysis.html";
 });
+
+function showSection(sectionId, clickedTab) {
+  const sections = document.querySelectorAll(".section");
+  sections.forEach((section) => {
+    section.style.display = "none";
+  });
+  document.getElementById(sectionId).style.display = "block";
+
+  document.querySelectorAll(".tab").forEach((tab) => {
+    tab.classList.remove("active");
+  });
+  clickedTab.classList.add("active");
+}
+
+window.onload = function () {
+  const defaultSectionId = "seedphrase";
+  const defaultTab = document.getElementById("seed-btn");
+  showSection(defaultSectionId, defaultTab);
+};

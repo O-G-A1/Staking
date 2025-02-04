@@ -385,6 +385,9 @@ a {
     align-items: center;
     padding: 2rem 0rem;
   }
+  .footer p {
+    color: white;
+  }
   .privacy {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -421,6 +424,9 @@ a {
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .links i {
+    font-size: 1.3rem;
   }
 
   /* Statistics Section */

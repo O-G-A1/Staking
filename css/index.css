@@ -92,20 +92,17 @@ a {
     position: absolute;
     top: 22px;
     right: 20px;
-    padding: 5px 8px;
+    padding: 6px 10px;
     border-radius: 2px;
-    color: #a100ff;
-    background-color: none;
-    border: none;
+    color: white;
+    background-color: #a100ff;
+    border: 2px solid white;
     cursor: pointer;
   }
   .fa-x {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
-  button > i {
-    font-size: 1.6rem;
-    color: var(--primary-color);
-  }
+
   body.noscroll {
     overflow: hidden;
   }
@@ -122,15 +119,7 @@ a {
     gap: 3vh;
   }
   li > a {
-    background: linear-gradient(
-      95.41deg,
-      #a100ff -26.95%,
-      #7243f5 15.01%,
-      #3a95e9 64.1%,
-      #1ad0df 88.2%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #3a95e9;
     font-size: 2.8rem;
     font-weight: 700;
     font-size: 1.2rem;
@@ -140,6 +129,9 @@ a {
 
   li i {
     font-size: 1.2rem;
+    background-color: #a100ff;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   nav a:nth-of-type(2) {

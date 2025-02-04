@@ -17,20 +17,86 @@
     padding: 8px 60px;
     gap: 50px;
   }
+
   .selection {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    background-color: rgb(221, 210, 237);
-    border-radius: 10px;
-    padding: 10px;
+    position: relative;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
     text-align: center;
-    line-height: 1;
+    border-radius: 5px;
+    z-index: 1;
+    border: 1px solid transparent;
   }
+  .selection::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient(
+      95.41deg,
+      #a200ff -26.95%,
+      #7243f5fe 15.01%,
+      #3a94e9 64.1%,
+      #1acfdf 88.2%
+    );
+    background-size: 300%;
+    border-radius: 5px;
+    animation: animate-border 1s linear infinite;
+    mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    -webkit-mask: linear-gradient(white 0 0) content-box,
+      linear-gradient(white 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    padding: 3px; /* Controls border thickness */
+  }
+
+  @keyframes animate-border {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .selection::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: rgba(0, 0, 0, 0.4);
+    /* background: transparent; */
+    border-radius: 5px;
+    z-index: -1;
+  }
+
   .selection b {
     font-size: 1.2rem;
-    color: var(--primary-color);
-    text-shadow: 0.5px 0.5px 2px var(--primary-color);
+    font-weight: 900;
+    background: linear-gradient(
+      95.41deg,
+      #a100ff -26.95%,
+      #7243f5 15.01%,
+      #3a95e9 64.1%,
+      #1ad0df 88.2%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .selection span {
     font-size: 1rem;
@@ -42,29 +108,29 @@
     padding: 10px 8px;
   }
   .introtooptions h3 {
+    background: linear-gradient(
+      95.41deg,
+      #a100ff -26.95%,
+      #7243f5 15.01%,
+      #3a95e9 64.1%,
+      #1ad0df 88.2%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.7rem;
+    font-weight: 900;
     text-align: center;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-shadow: 0.5px 0.5px 2px var(--primary-color);
   }
   .firstpara {
     text-align: center;
-    text-shadow: 0.5px 0.5px 2px var(--primary-color);
+    color: white;
     font-size: 1.2rem;
     font-weight: 500;
     padding: 15px 40px;
   }
   .selectoptions {
     text-align: center;
-  }
-  .chartdiv {
-    padding: 0px 20px;
-    height: 80px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(cryptochart.jpg);
+    color: #1ad0df;
   }
 
   .others {
@@ -72,18 +138,20 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 5vh;
-    padding: 10px 60px;
+    padding: 10px 40px;
     gap: 10px;
   }
   .others label {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 700;
     text-align: center;
-    text-shadow: 0.5px 0.5px 1px black;
+    color: #1ad0df;
   }
   .others textarea {
     outline: none;
-    border: 2px solid rgba(0, 0, 0, 0.586);
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
     padding: 2px 10px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -93,56 +161,46 @@
     border-color: var(--primary-color);
   }
   .others input {
-    background-color: rgb(221, 210, 237);
-    border: none;
-    padding: 5px 10px;
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    font-weight: 600;
+    background: linear-gradient(94.95deg, #a100ff -18.47%, #00a9b7 109.42%);
+    font-size: 1.3rem;
+    margin-top: 2vh;
+    padding: 0.4rem 0.6rem;
     border-radius: 5px;
+    color: white;
+  }
+  .defibody {
+    padding: 0.4rem 1.5rem;
   }
   .defih3 {
-    font-size: 1.3rem;
+    background: linear-gradient(
+      95.41deg,
+      #a100ff -26.95%,
+      #7243f5 15.01%,
+      #3a95e9 64.1%,
+      #1ad0df 88.2%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.7rem;
+    font-weight: 900;
     text-align: center;
-    padding: 0.4rem 2rem;
-    text-shadow: 0.5px 0.5px 1px black;
+    padding: 0.4rem 1rem;
   }
-  .defilist {
+  .defibody .feature-text1,
+  .feature-text2,
+  .feature-text3,
+  .feature-text4 {
+    font-size: 1.2rem;
+    font-weight: 900;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .defibody p {
     margin-top: 0;
-    padding: 0.4rem 1.9rem;
-    text-shadow: 0.5px 0.5px 1px black;
-    list-style-type: disc;
-  }
-  .defilist span {
-    text-shadow: 0.5px 0.5px 1px black;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  .header1 {
-    background-color: black;
+    padding: 0.4rem 1.5rem;
     color: white;
-    padding: 0px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    font-size: 1.1rem;
   }
 
-  /* Styling for the moving text */
-  .header1 p {
-    display: inline-block;
-    white-space: nowrap;
-    animation: move-text 50s normal;
-  }
-
-  /* Animation to make the text move */
-  @keyframes move-text {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
   .chart {
     padding: 0.4rem 1.9rem;
   }
@@ -158,18 +216,15 @@
     padding: 0.4rem 1.9rem;
   }
   .defibutton {
-    background-color: rgb(221, 210, 237);
-    padding: 15px 10px;
-    color: black;
+    background: linear-gradient(94.95deg, #a100ff -18.47%, #00a9b7 109.42%);
     font-size: 1.3rem;
+    margin-top: 2vh;
     width: 100%;
     text-align: center;
-    font-weight: 600;
+    padding: 0.5rem 0.7rem;
+    font-weight: 800;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  .defibutton:hover {
-    background-color: var(--primary-color);
+    color: white;
   }
 
   .tabs {
@@ -185,12 +240,14 @@
     font-weight: 600;
     border: none;
     border-radius: 5px;
-    background-color: rgb(221, 210, 237);
+    background: linear-gradient(94.95deg, #a100ff -18.47%, #00a9b7 109.42%);
+    color: white;
     cursor: pointer;
   }
   .tab.active {
-    background-color: black;
+    background: rgba(0, 0, 0, 0.4);
     color: white;
+    border: 2px solid white;
   }
   #seedphrase,
   #keystore,
@@ -201,12 +258,15 @@
   }
   .enableselect {
     font-size: 1.2rem;
-    text-align: center;
     padding: 0rem 0.9rem;
-    text-shadow: 0.5px 0.5px 1px black;
+    color: #1ad0df;
+    background: rgba(0, 0, 0, 0.4);
+    width: fit-content;
+    margin: 10px auto;
   }
   #seedphrase textarea {
     outline: none;
+    background: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(0, 0, 0, 0.586);
     padding: 2px 10px;
     border-radius: 5px;
@@ -217,6 +277,7 @@
   #seedphrase input {
     outline: none;
     border: 2px solid rgba(0, 0, 0, 0.586);
+    background: rgba(255, 255, 255, 0.8);
     padding: 2px 10px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -230,8 +291,9 @@
   .seed,
   .keystore {
     margin-top: 0;
-    font-size: 1.1rem;
-    font-weight: 600;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
     text-align: center;
   }
   .section button {
@@ -242,11 +304,14 @@
     font-weight: 600;
     border: none;
     border-radius: 5px;
-    background-color: rgb(221, 210, 237);
+    background: linear-gradient(94.95deg, #a100ff -18.47%, #00a9b7 109.42%);
+    color: white;
     transition: background-color 0.3s ease;
   }
   .section button:hover {
-    background-color: var(--primary-color);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: 2px solid white;
   }
   #keystore textarea {
     outline: none;
@@ -255,6 +320,7 @@
     border-radius: 5px;
     font-size: 0.9rem;
     transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
     width: 100%;
     height: 100px;
     margin-bottom: 15px;
@@ -269,6 +335,7 @@
     border-radius: 5px;
     font-size: 0.9rem;
     transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
     width: 100%;
     height: 40px;
     /* margin-bottom: 20px; */
@@ -286,6 +353,7 @@
     border-radius: 5px;
     font-size: 0.9rem;
     transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
     width: 100%;
     height: 50px;
     margin-bottom: 20px;
@@ -298,23 +366,35 @@
     border-color: var(--primary-color);
   }
   .defiinfoh1 {
-    font-size: 1.4rem;
+    background: linear-gradient(
+      95.41deg,
+      #a100ff -26.95%,
+      #7243f5 15.01%,
+      #3a95e9 64.1%,
+      #1ad0df 88.2%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 900;
     text-align: center;
     padding: 0.4rem 0.7rem;
-    text-shadow: 0.5px 0.5px 1px black;
   }
   .defiinfopara {
     font-size: 1.2rem;
     text-align: left;
+    font-weight: 600;
     padding: 0.4rem 1.3rem;
-    text-shadow: 0.5px 0.5px 1px black;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
   }
   .definotify {
     margin-top: 0;
     font-size: 1rem;
     text-align: center;
     padding: 0.4rem 0.9rem;
-    text-shadow: 0.5px 0.5px 1px black;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
   }
   .header {
     background-color: inherit;

@@ -192,7 +192,8 @@
   .feature-text4 {
     font-size: 1.2rem;
     font-weight: 900;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
+    width: fit-content;
   }
   .defibody p {
     margin-top: 0;
@@ -203,6 +204,8 @@
 
   .chart {
     padding: 0.4rem 1.9rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
   }
   .chart img {
     width: 100%;

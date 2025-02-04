@@ -452,11 +452,11 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    gap: 10px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -471,11 +471,8 @@ a {
       #1ad0df 88.2%
     );
     border-radius: 10px;
-    padding: 10px 5px;
     width: 20vw;
     text-align: center;
-    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   .statitemmain {
     display: -webkit-box;
@@ -493,13 +490,11 @@ a {
   .stat-item h4 {
     font-size: 20px;
     font-weight: bold;
-    text-shadow: 0.5px 0.5px 1px black;
   }
 
   .statitemmain p {
     color: white;
-    font-size: 16px;
-    text-shadow: 0.5px 0.5px 2px black;
+    font-size: 14px;
   }
 
   .powered {

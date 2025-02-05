@@ -83,3 +83,6 @@ function showSection(sectionId, clickedTab) {
   });
   clickedTab.classList.add("active");
 }
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});

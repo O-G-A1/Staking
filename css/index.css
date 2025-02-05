@@ -20,6 +20,23 @@ a {
   text-decoration: none;
 }
 @media all and (max-width: 600px) {
+  body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body.loaded {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-image: url(../icons/images/backgroundavif.avif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
   .icon {
     width: 3.9rem;
   }

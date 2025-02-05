@@ -672,4 +672,30 @@
     font-size: 16px;
     color: #6a33ff;
   }
+  .bot-how-it-works {
+    text-align: left;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    margin-top: 60px;
+  }
+  .bot-how-it-works strong {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 5px;
+    background: linear-gradient(
+      95.41deg,
+      #a100ff -26.95%,
+      #7243f5 15.01%,
+      #3a95e9 64.1%,
+      #1ad0df 88.2%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 10px;
+  }
 }

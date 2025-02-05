@@ -199,6 +199,67 @@
 </div>
     </div>
 
+    <section class="faq-section">
+    <h2 class="faq-title">FAQs</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">What is DeFiVerse?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+                DeFiVerse is a decentralized investment platform that allows users to create, manage, and invest in crypto funds seamlessly.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What is a crypto fund?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+                A crypto fund is a pooled investment vehicle that allows investors to gain exposure to various cryptocurrencies and blockchain projects.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What are the advantages of DeFiVerse Funds?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+                DeFiVerse Funds provide transparency, security, and decentralized management, reducing reliance on traditional financial intermediaries.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What kind of fees can I charge as a Fund manager?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+                Fund managers can charge management fees, performance fees, and other transaction-based fees based on the fund’s structure.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What dApp integrations will be available initially?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+                Initially, DeFiVerse will integrate with Uniswap, Aave, and Compound for seamless DeFi interactions.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Want to request a dApp integration?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+                You can request new dApp integrations by reaching out to our team through the support section on our platform.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">When will DeFiVerse go Live?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+                DeFiVerse is scheduled to go live in Q2 of this year. Stay updated by subscribing to our newsletter.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Want to test our product?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+                Sign up for our beta program and get early access to test DeFiVerse before the official launch.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Where can I read more about DeFiVerse?<span class="faq-icon">+</span></button>
+            <div class="faq-answer">
+                Visit our official website and read our whitepaper to understand the full scope of DeFiVerse.
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
     <hr class="hrfooter">
     <div class="footer">
@@ -217,7 +278,22 @@
         <a href="#"><i class="fa-brands fa-github"></i></a>
       </div>
     </div>
+<script>
+  document.querySelectorAll(".faq-question").forEach((button) => {
+  button.addEventListener("click", () => {
+    const answer = button.nextElementSibling;
+    const icon = button.querySelector(".faq-icon");
 
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+      icon.textContent = "+";
+    } else {
+      answer.style.display = "block";
+      icon.textContent = "−";
+    }
+  });
+});
+</script>
     <script
       src="https://kit.fontawesome.com/2f8df1a2ea.js"
       crossorigin="anonymous"

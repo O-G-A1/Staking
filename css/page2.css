@@ -520,13 +520,64 @@
       transform: scale(1);
     }
   }
-  .how-it-works {
-    font-family: Arial, sans-serif;
+  .staking-container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
     color: white;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .staking-tabs {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: fit-content;
-    margin-top: 4vh;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .staking-tab {
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 0.3px solid white;
+    color: #bbb;
+    transition: background 0.3s, color 0.3s;
+  }
+  .staking-tab.active {
+    border: none;
+    background: #6a33ff;
+    color: white;
+  }
+  .staking-content {
+    display: none;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+  }
+  .staking-content.active {
+    display: block;
+  }
+  .staking-step {
+    margin: 20px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+  }
+  .staking-step-number {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6a33ff;
+  }
+  .staking-button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #6a33ff, #33aaff);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
   }
 }

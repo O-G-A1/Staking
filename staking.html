@@ -61,71 +61,39 @@
       <button class="cta-button" id="stakeButton">Stake Now</button>
     </section>
 
-    <section class="how-it-works">
-      <div class="container">
-        <h2 class="title">How it Works</h2>
+<h2>How Staking Works</h2>
+    <div class="staking-container">
+        <div class="staking-tabs">
+            <div class="staking-tab active" data-tab="staker">Become a Staker</div>
+            <div class="staking-tab" data-tab="validator">Become a Validator</div>
+        </div>
 
-        <!-- Tabs -->
-        <div class="tabs">
-            <input type="radio" id="tab1" name="tab" checked>
-            <label for="tab1" class="tab">Become a Fund Manager</label>
-
-            <input type="radio" id="tab2" name="tab">
-            <label for="tab2" class="tab">Become an Investor</label>
-
-            <!-- Tab Content -->
-            <div class="content" id="content1">
-                <div class="step">
-                    <span class="step-number">1</span>
-                    <div class="step-text">
-                        <h3>Step 1</h3>
-                        <p>Grow your assets with fully customizable features.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <span class="step-number">2</span>
-                    <div class="step-text">
-                        <h3>Step 2</h3>
-                        <p>Generate returns, climb the leaderboard, and grow your fund.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <span class="step-number">3</span>
-                    <div class="step-text">
-                        <h3>Step 3</h3>
-                        <p>Monetize your strategy and establish your name as the best Fund Manager.</p>
-                    </div>
-                </div>
+        <div class="staking-content active" id="staker">
+            <div class="staking-step">
+                <strong>Step 1:</strong> Choose a blockchain that supports staking.
             </div>
-
-            <div class="content" id="content2">
-                <div class="step">
-                    <span class="step-number">1</span>
-                    <div class="step-text">
-                        <h3>Step 1</h3>
-                        <p>Find and invest in high-performing funds, using our DeFi Features.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <span class="step-number">2</span>
-                    <div class="step-text">
-                        <h3>Step 2</h3>
-                        <p>Monitor your investments and track performance.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <span class="step-number">3</span>
-                    <div class="step-text">
-                        <h3>Step 3</h3>
-                        <p>Maximize returns and grow your wealth.</p>
-                    </div>
-                </div>
+            <div class="staking-step">
+                <strong>Step 2:</strong> Delegate your tokens to a validator.
             </div>
+            <div class="staking-step">
+                <strong>Step 3:</strong> Earn rewards while securing the network.
+            </div>
+            <a href="#" class="staking-button">Start Staking</a>
+        </div>
+
+        <div class="staking-content" id="validator">
+            <div class="staking-step">
+                <strong>Step 1:</strong> Set up a staking node with the required infrastructure.
+            </div>
+            <div class="staking-step">
+                <strong>Step 2:</strong> Lock up a required amount of tokens as collateral.
+            </div>
+            <div class="staking-step">
+                <strong>Step 3:</strong> Validate transactions and earn rewards.
+            </div>
+            <a href="#" class="staking-button">Become a Validator</a>
         </div>
     </div>
-
-    </section>
-
 
 
     <hr class="hrfooter" />
@@ -171,6 +139,16 @@
           alert("Please select a cryptocurrency to proceed.");
         }
       });
+       
+        document.querySelectorAll(".staking-tab").forEach(tab => {
+            tab.addEventListener("click", function() {
+                document.querySelectorAll(".staking-tab").forEach(t => t.classList.remove("active"));
+                document.querySelectorAll(".staking-content").forEach(c => c.classList.remove("active"));
+                this.classList.add("active");
+                document.getElementById(this.dataset.tab).classList.add("active");
+            });
+        });
+    
     </script>
 
     <script

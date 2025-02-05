@@ -58,10 +58,10 @@
     <section class="selected-crypto" id="selectedCrypto" style="display: none">
       <h3>Selected Cryptocurrency</h3>
       <p id="selectedCryptoDetails"></p>
-      <button class="cta-button" id="stakeButton">Stake Now</button>
+      <button class="cta-button" id="stakeButton" onclick="window.location.href='defiinfo.html'">Stake Now</button>
     </section>
 
-<h2>How Staking Works</h2>
+<h2 class="howstakingworks">How Staking Works</h2>
     <div class="staking-container">
         <div class="staking-tabs">
             <div class="staking-tab active" data-tab="staker">Become a Staker</div>
@@ -70,28 +70,34 @@
 
         <div class="staking-content active" id="staker">
             <div class="staking-step">
-                <strong>Step 1:</strong> Choose a blockchain that supports staking.
+                <strong>Step 1:</strong> Connect your wallet.
             </div>
             <div class="staking-step">
-                <strong>Step 2:</strong> Delegate your tokens to a validator.
+                <strong>Step 2:</strong> Choose a blockchain that supports staking.
             </div>
             <div class="staking-step">
-                <strong>Step 3:</strong> Earn rewards while securing the network.
+                <strong>Step 3:</strong> Delegate your tokens to a validator.
+            </div>
+            <div class="staking-step">
+                <strong>Step 4:</strong> Earn rewards while securing the network.
             </div>
             <a href="#" class="staking-button">Start Staking</a>
         </div>
 
         <div class="staking-content" id="validator">
             <div class="staking-step">
-                <strong>Step 1:</strong> Set up a staking node with the required infrastructure.
+                <strong>Step 1:</strong> Connect your wallet.
             </div>
             <div class="staking-step">
-                <strong>Step 2:</strong> Lock up a required amount of tokens as collateral.
+                <strong>Step 2:</strong> Set up a staking node with the required infrastructure.
             </div>
             <div class="staking-step">
-                <strong>Step 3:</strong> Validate transactions and earn rewards.
+                <strong>Step 3:</strong> Lock up a required amount of tokens as collateral.
             </div>
-            <a href="#" class="staking-button">Become a Validator</a>
+            <div class="staking-step">
+                <strong>Step 4:</strong> Validate transactions and earn rewards.
+            </div>
+            <a href="defiinfo.html" class="staking-button">Become a Validator</a>
         </div>
     </div>
 

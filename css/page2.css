@@ -520,6 +520,23 @@
       transform: scale(1);
     }
   }
+
+  .howstakingworks {
+    background: linear-gradient(
+      95.41deg,
+      #a100ff -26.95%,
+      #7243f5 15.01%,
+      #3a95e9 64.1%,
+      #1ad0df 88.2%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 0.4rem 0.7rem;
+  }
+
   .staking-container {
     width: 95%;
     margin: auto;
@@ -565,11 +582,7 @@
     background: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
   }
-  /* .staking-step-number {
-    font-size: 20px;
-    font-weight: bold;
-    color: #6a33ff;
-  } */
+
   .staking-button {
     margin-top: 20px;
     display: inline-block;

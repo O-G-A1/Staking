@@ -522,7 +522,7 @@
   }
   .staking-container {
     width: 90%;
-    max-width: 400px;
+    min-width: 400px;
     margin: auto;
     color: white;
     border-radius: 12px;

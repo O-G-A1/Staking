@@ -521,12 +521,11 @@
     }
   }
   .staking-container {
-    width: 90%;
-    min-width: 400px;
+    width: 95%;
     margin: auto;
     color: white;
     border-radius: 12px;
-    padding: 20px;
+    padding: 20px 30px;
   }
   .staking-tabs {
     display: flex;
@@ -561,7 +560,7 @@
     display: block;
   }
   .staking-step {
-    margin: 20px 0;
+    margin: 40px 0;
     padding: 10px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 6px;

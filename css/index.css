@@ -9,6 +9,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 :root {
@@ -35,6 +37,8 @@ a {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    image-rendering: crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
   .icon {
@@ -112,8 +116,8 @@ a {
     padding: 6px 10px;
     border-radius: 2px;
     color: white;
-    background-color: #a100ff;
-    border: 2px solid white;
+    background-color: black;
+    border: 1px solid white;
     cursor: pointer;
   }
   .fa-x {
@@ -136,7 +140,7 @@ a {
     gap: 3vh;
   }
   li > a {
-    color: #3a95e9;
+    color: white;
     font-size: 2.8rem;
     font-weight: 700;
     font-size: 1.2rem;
@@ -146,17 +150,12 @@ a {
 
   li i {
     font-size: 1.2rem;
-    background-color: #a100ff;
+    background-color: white;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  nav a:nth-of-type(2) {
-    font-size: 1.4rem;
-    color: var(--primary-color);
-  }
   hr {
-    width: 90%;
+    width: 100%;
   }
   .content1 {
     display: -webkit-box;

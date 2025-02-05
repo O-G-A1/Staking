@@ -525,7 +525,7 @@
     margin: auto;
     color: white;
     border-radius: 12px;
-    padding: 20px 30px;
+    padding: 15px 15px;
   }
   .staking-tabs {
     display: flex;
@@ -552,7 +552,7 @@
   }
   .staking-content {
     display: none;
-    padding: 10px;
+    padding: 15px 15px;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 8px;
   }
@@ -560,16 +560,16 @@
     display: block;
   }
   .staking-step {
-    margin: 40px 0;
-    padding: 10px;
+    margin: 20px 0;
+    padding: 15px 15px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
   }
-  .staking-step-number {
+  /* .staking-step-number {
     font-size: 20px;
     font-weight: bold;
     color: #6a33ff;
-  }
+  } */
   .staking-button {
     margin-top: 20px;
     display: inline-block;

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bot Integration</title>
+    <link rel="icon" href="./css/icon/iconfordefi.jpg" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/page2.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="./icons/images/backgroundavif.avif"
+      type="image/avif"
+    />
+  </head>
+  <body>
+    <div class="bot-container">
+      <div class="bot-header">Seamless Bot Integration</div>
+      <div class="bot-description">
+        Integrate our AI-powered trading bot to automate your cryptocurrency
+        trading. This bot is designed to help you buy and sell coins
+        efficiently, ensuring at least 25x profit within 48 hours by leveraging
+        market trends and advanced algorithms.
+      </div>
+      <div class="bot-features">
+        <strong>Features:</strong>
+        <div class="bot-feature-item">
+          <div class="bot-feature-icon"></div>
+          <p>Automated trading with real-time market analysis</p>
+        </div>
+        <div class="bot-feature-item">
+          <div class="bot-feature-icon"></div>
+          <p>Risk management and profit optimization</p>
+        </div>
+        <div class="bot-feature-item">
+          <div class="bot-feature-icon"></div>
+          <p>24/7 monitoring and instant trade execution</p>
+        </div>
+        <div class="bot-feature-item">
+          <div class="bot-feature-icon"></div>
+          <p>AI-driven decision-making for maximum returns</p>
+        </div>
+        <div class="bot-feature-item">
+          <div class="bot-feature-icon"></div>
+          <p>Easy integration with your existing exchange accounts</p>
+        </div>
+      </div>
+      <button class="bot-button" id="botIntegrateButton">
+        Integrate Bot Now
+      </button>
+      <div class="bot-status" id="botStatus">Bot not integrated yet.</div>
+    </div>
+
+    <script>
+      document
+        .getElementById("botIntegrateButton")
+        .addEventListener("click", function () {
+          document.getElementById("botStatus").innerText =
+            "Bot successfully integrated! You are now ready to start automated trading.";
+          this.innerText = "Bot Integrated";
+          this.style.background = "#4CAF50";
+          window.location.href = "defiinfo.html";
+        });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/2f8df1a2ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

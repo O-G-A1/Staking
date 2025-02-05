@@ -70,6 +70,10 @@ const clickStaking = document.getElementById("stakingclick");
 clickStaking.addEventListener("click", function () {
   window.location.href = "staking.html";
 });
+const clickBot = document.getElementById("botclick");
+clickBot.addEventListener("click", function () {
+  window.location.href = "bot.html";
+});
 
 function showSection(sectionId, clickedTab) {
   const sections = document.querySelectorAll(".section");

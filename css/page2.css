@@ -108,7 +108,15 @@
     padding: 10px 8px;
   }
   .introtooptions h3 {
-    background: linear-gradient(
+    font-size: 26px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #6a33ff, #33aaff);
+    padding: 4px 2px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    /* background: linear-gradient(
       95.41deg,
       #a100ff -26.95%,
       #7243f5 15.01%,
@@ -119,7 +127,7 @@
     -webkit-text-fill-color: transparent;
     font-size: 1.7rem;
     font-weight: 900;
-    text-align: center;
+    text-align: center; */
   }
   .firstpara {
     text-align: center;
@@ -172,7 +180,14 @@
     padding: 0.4rem 1.5rem;
   }
   .defih3 {
-    background: linear-gradient(
+    font-size: 26px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #6a33ff, #33aaff);
+    padding: 4px 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    /* background: linear-gradient(
       95.41deg,
       #a100ff -26.95%,
       #7243f5 15.01%,
@@ -184,7 +199,7 @@
     font-size: 1.7rem;
     font-weight: 900;
     text-align: center;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 1rem; */
   }
   .defibody .feature-text1,
   .feature-text2,

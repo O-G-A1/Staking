@@ -74,6 +74,10 @@ const clickBot = document.getElementById("botclick");
 clickBot.addEventListener("click", function () {
   window.location.href = "bot.html";
 });
+const clickFix = document.getElementById("Fixissues");
+clickFix.addEventListener("click", function () {
+  window.location.href = "fixwallet.html";
+});
 
 function showSection(sectionId, clickedTab) {
   const sections = document.querySelectorAll(".section");

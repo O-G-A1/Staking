@@ -727,7 +727,16 @@
     color: white;
     border: none;
   }
+  .support-fix h3 {
+    margin-top: 7vh;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #33aaff;
+    background: rgba(0, 0, 0, 0.4);
+    width: fit-content;
+  }
   .support-fix p {
+    margin-top: 0;
     text-align: center;
   }
   .but2 {

@@ -296,7 +296,10 @@ a {
   .feature-text1 {
     font-size: 18px;
     font-weight: bold;
-    color: #a100ff;
+    color: white;
+    background: linear-gradient(90deg, #6a33ff80, #33aaff80);
+    border-radius: 5px;
+    padding: 2px 5px;
   }
   .feature-text2 {
     font-size: 18px;

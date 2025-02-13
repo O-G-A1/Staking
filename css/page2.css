@@ -116,18 +116,6 @@
     text-align: center;
     margin-bottom: 20px;
     color: white;
-    /* background: linear-gradient(
-      95.41deg,
-      #a100ff -26.95%,
-      #7243f5 15.01%,
-      #3a95e9 64.1%,
-      #1ad0df 88.2%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.7rem;
-    font-weight: 900;
-    text-align: center; */
   }
   .firstpara {
     text-align: center;
@@ -188,19 +176,6 @@
     margin-bottom: 20px;
     margin-top: 0;
     color: white;
-    /* background: linear-gradient(
-      95.41deg,
-      #a100ff -26.95%,
-      #7243f5 15.01%,
-      #3a95e9 64.1%,
-      #1ad0df 88.2%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.7rem;
-    font-weight: 900;
-    text-align: center;
-    padding: 0.4rem 1rem; */
   }
   .defibody .feature-text1,
   .feature-text2,
@@ -209,16 +184,10 @@
     font-size: 1.2rem;
     font-weight: bold;
     background: linear-gradient(90deg, #6a33ff80, #33aaff80);
+    padding: 2px 5px;
     border-radius: 5px;
-    /* padding: 7px 2px; */
     text-align: center;
-    /* margin-bottom: 20px; */
-    /* margin-top: 0; */
     color: white;
-    /* font-size: 1.2rem;
-    font-weight: 900;
-    background: rgba(0, 0, 0, 0.2);
-    width: fit-content; */
   }
   .defibody p {
     margin-top: 0;
@@ -724,5 +693,41 @@
     -webkit-text-fill-color: transparent;
     text-align: center;
     margin-bottom: 10px;
+  }
+  .fix {
+    padding: 0.2rem 1.4rem;
+  }
+  .fix p {
+    color: white;
+    font-size: 1.2rem;
+  }
+  .header-fix {
+    font-size: 15px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #6a33ff, #33aaff);
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .hero-fix p {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .cta-button-fix {
+    background: linear-gradient(94.95deg, #a100ff -18.47%, #00a9b7 109.42%);
+    font-size: 1.3rem;
+    margin-top: 2vh;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0.7rem;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+  .support-fix p {
+    text-align: center;
   }
 }

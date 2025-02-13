@@ -576,10 +576,11 @@ a {
   }
 
   .faq-title {
+    margin-top: 10vh;
     font-size: 36px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #9b5cf6; /* Purple gradient effect */
+    color: #9b5cf6;
   }
 
   .faq-container {
@@ -588,7 +589,7 @@ a {
 
   .faq-item {
     border-bottom: 1px solid #555;
-    padding: 10px 0;
+    padding: 5px 0;
   }
 
   .faq-question {
@@ -603,7 +604,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 5px 15px;
   }
 
   .faq-icon {
@@ -614,7 +615,7 @@ a {
   .faq-answer {
     display: none;
     font-size: 16px;
-    padding: 10px 15px;
+    padding: 5px 15px;
     color: #ccc;
   }
 }
